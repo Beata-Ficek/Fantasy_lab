@@ -4,7 +4,7 @@ import Defenders.IDefend;
 import Players.Player;
 import Spells.ISpell;
 
-public abstract class Mage extends Player implements IDefend {
+public abstract class Mage extends Player implements IDefend, ISpell {
 
     private int defendValue;
 

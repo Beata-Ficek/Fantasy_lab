@@ -4,6 +4,7 @@ import Defenders.Dragon;
 import Defenders.Ogre;
 import Enemies.Orc;
 import Enemies.Troll;
+import Players.Wizard;
 import Spells.Abracadabra;
 import Spells.HokusPokus;
 import Weapons.Ax;
@@ -23,6 +24,7 @@ public class EnemyTest {
     HokusPokus hokusPokus;
     Dragon dragon;
     Ogre ogre;
+    Wizard wizard;
 
     @Before
     public void before(){
@@ -34,6 +36,7 @@ public class EnemyTest {
         hokusPokus = new HokusPokus(10);
         dragon = new Dragon(10);
         ogre = new Ogre(20);
+        wizard= new Wizard("MagicMike", 100, 2);
     }
 
     @Test
@@ -67,5 +70,10 @@ public class EnemyTest {
         assertEquals(280, orc.takeDamage(ogre.getDefendValue()));
     }
 
+    @Test
+    public void canTakeDamageFromMage(){
+        assertEquals(298, orc.takeDamage(wizard.getDefendValue()));
+
+    }
 
 }

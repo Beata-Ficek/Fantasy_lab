@@ -19,4 +19,6 @@ public abstract class Enemy {
     public int takeDamage(int damage){
         return this.HP - damage;
     }
+
+
 }
