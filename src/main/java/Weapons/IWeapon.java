@@ -1,5 +1,6 @@
 package Weapons;
 
 public interface IWeapon {
-    int attack();
+    String attack();
+
 }

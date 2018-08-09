@@ -11,7 +11,7 @@ public class Dwarf extends Fighter {
     }
 
     @Override
-    public int attack() {
-        return 0;
+    public String  attack() {
+        return "I am a dwarf will attack you.";
     }
 }

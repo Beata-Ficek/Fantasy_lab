@@ -2,6 +2,8 @@ package EnemyTest;
 
 import Enemies.Orc;
 import Enemies.Troll;
+import Spells.Abracadabra;
+import Spells.HokusPokus;
 import Weapons.Ax;
 import Weapons.Sword;
 import org.junit.Before;
@@ -15,6 +17,8 @@ public class EnemyTest {
     Troll troll;
     Sword sword;
     Ax ax;
+    Abracadabra abracadabra;
+    HokusPokus hokusPokus;
 
     @Before
     public void before(){
@@ -22,6 +26,8 @@ public class EnemyTest {
         troll = new Troll (400);
         sword = new Sword (20);
         ax = new Ax(30);
+        abracadabra = new Abracadabra(5);
+        hokusPokus = new HokusPokus(10);
     }
 
     @Test
@@ -38,8 +44,14 @@ public class EnemyTest {
 
     @Test
     public void canTakeDamageFromAWeapon(){
-        assertEquals(280, orc.takeDamage(sword.attack()));
-        assertEquals(370, troll.takeDamage(ax.attack()));
+        assertEquals(280, orc.takeDamage(sword.getDamageValue()));
+        assertEquals(370, troll.takeDamage(ax.getDamageValue()));
+    }
+
+    @Test
+    public void canTakeDamageFromASpell(){
+        assertEquals(395, troll.takeDamage(abracadabra.getPowerValue()));
+        assertEquals(290, orc.takeDamage((hokusPokus.getPowerValue())));
     }
 
 

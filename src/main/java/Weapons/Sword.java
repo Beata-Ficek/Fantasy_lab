@@ -12,7 +12,11 @@ public class Sword implements IWeapon {
 
 
     @Override
-    public int attack() {
-        return this.damageValue;
+    public String attack() {
+        return "I will cut you";
+    }
+
+    public int getDamageValue(){
+        return  this.damageValue;
     }
 }

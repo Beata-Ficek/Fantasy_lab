@@ -19,8 +19,8 @@ public class WeaponTest {
     }
 
     @Test
-    public void canAttack(){
-        assertEquals(30, ax.attack());
-        assertEquals(15, sword.attack());
+    public void canGetDamageValue(){
+        assertEquals(30, ax.getDamageValue());
+        assertEquals(15, sword.getDamageValue());
     }
 }

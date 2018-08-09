@@ -9,7 +9,7 @@ public class Barbarian extends Fighter{
     }
 
     @Override
-    public int attack() {
-        return 0;
+    public String attack() {
+        return "I am a Barbarian will attack you.";
     }
 }

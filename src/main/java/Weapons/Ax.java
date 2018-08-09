@@ -9,8 +9,12 @@ public class Ax implements IWeapon{
     }
 
     @Override
-    public int attack() {
-        return this.damageValue;
+    public String attack() {
+        return "I will cut you in half";
 
+    }
+
+    public int getDamageValue(){
+        return this.damageValue;
     }
 }

@@ -10,7 +10,7 @@ public class Knight extends Fighter{
 
 
     @Override
-    public int attack() {
-        return 0;
+    public String  attack() {
+        return "I am a knight will attack you.";
     }
 }
