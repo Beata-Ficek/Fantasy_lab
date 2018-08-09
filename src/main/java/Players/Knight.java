@@ -1,8 +1,16 @@
 package Players;
 
-public class Knight extends Fighter {
+import Weapons.IWeapon;
 
-    public Knight(String name, int HP) {
-        super(name, HP);
+public class Knight extends Fighter{
+
+    public Knight(String name, int HP, IWeapon weapon) {
+        super(name, HP, weapon);
+    }
+
+
+    @Override
+    public int attack() {
+        return 0;
     }
 }

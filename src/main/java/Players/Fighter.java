@@ -1,14 +1,16 @@
 package Players;
 
 
-public abstract class Fighter extends Player{
+import Weapons.IWeapon;
 
+public abstract class Fighter extends Player implements IWeapon {
 
-    public Fighter(String name, int HP) {
+    IWeapon weapon;
+
+    public Fighter(String name, int HP, IWeapon weapon) {
         super(name, HP);
+        this.weapon = weapon;
     }
-
-
 
 }
 

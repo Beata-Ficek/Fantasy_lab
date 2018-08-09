@@ -1,18 +1,16 @@
 package Weapons;
 
-public class Sword implements IWeapon {
+public class Ax implements IWeapon{
 
     private int damageValue;
 
-    public Sword(int damageValue){
-
+    public Ax(int damageValue){
         this.damageValue = damageValue;
     }
-
-
 
     @Override
     public int attack() {
         return this.damageValue;
+
     }
 }
