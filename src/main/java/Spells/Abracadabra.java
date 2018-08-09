@@ -1,6 +1,6 @@
 package Spells;
 
-public class Abracadabra {
+public class Abracadabra implements ISpell{
     private int powerValue;
 
     public Abracadabra(int powerValue){
@@ -13,4 +13,8 @@ public class Abracadabra {
     }
 
 
+    @Override
+    public String cast() {
+        return "Abracadabra, you loose: " + this.powerValue;
+    }
 }

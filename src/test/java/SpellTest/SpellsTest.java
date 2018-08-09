@@ -19,9 +19,14 @@ public class SpellsTest {
     }
 
     @Test
-    public void hasPOwerValue() {
+    public void hasPowerValue() {
         assertEquals(10, hokuspokus.getPowerValue());
         assertEquals(15, abracadabra.getPowerValue());
+    }
+
+    @Test
+    public void canCast(){
+        assertEquals("HokusPokus CzaryMary, you loose :10", hokuspokus.cast());
     }
 }
 

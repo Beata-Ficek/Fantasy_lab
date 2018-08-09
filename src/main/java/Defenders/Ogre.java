@@ -14,6 +14,6 @@ public class Ogre implements IDefend {
 
     @Override
     public String defend() {
-        return "I can EAT you, you loose" + this.defendValue + "health points";
+        return "I can EAT you, you loose " + this.defendValue + " health points";
     }
 }

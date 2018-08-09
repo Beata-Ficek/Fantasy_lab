@@ -23,4 +23,9 @@ public class DefenderTest {
         assertEquals(24, dragon.getDefendValue());
         assertEquals(13, ogre.getDefendValue());
     }
+
+    @Test
+    public void canDefend(){
+        assertEquals("I can EAT you, you loose 13 health points", ogre.defend());
+    }
 }

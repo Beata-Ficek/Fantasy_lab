@@ -1,5 +1,7 @@
 package EnemyTest;
 
+import Defenders.Dragon;
+import Defenders.Ogre;
 import Enemies.Orc;
 import Enemies.Troll;
 import Spells.Abracadabra;
@@ -19,6 +21,8 @@ public class EnemyTest {
     Ax ax;
     Abracadabra abracadabra;
     HokusPokus hokusPokus;
+    Dragon dragon;
+    Ogre ogre;
 
     @Before
     public void before(){
@@ -28,6 +32,8 @@ public class EnemyTest {
         ax = new Ax(30);
         abracadabra = new Abracadabra(5);
         hokusPokus = new HokusPokus(10);
+        dragon = new Dragon(10);
+        ogre = new Ogre(20);
     }
 
     @Test
@@ -52,6 +58,13 @@ public class EnemyTest {
     public void canTakeDamageFromASpell(){
         assertEquals(395, troll.takeDamage(abracadabra.getPowerValue()));
         assertEquals(290, orc.takeDamage((hokusPokus.getPowerValue())));
+    }
+
+    @Test
+    public void canTakeDamageFromDefender(){
+        assertEquals(290, orc.takeDamage(dragon.getDefendValue()));
+        assertEquals(390, troll.takeDamage(dragon.getDefendValue()));
+        assertEquals(280, orc.takeDamage(ogre.getDefendValue()));
     }
 
 
